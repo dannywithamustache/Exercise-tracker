@@ -37,10 +37,7 @@ const userSchema = new mongoose.Schema({
   }
 });
 const User = mongoose.model("User", userSchema);
-
-//userName: danny3 , _id:5d334299cbba3f438837f0ae
-const isValidDate = d => {};
-
+//for dev to get user ids if needed, not for production
 app.get("/users", (req, res, next) => {
   User.find()
     .select("userName _id")
